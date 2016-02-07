@@ -10,6 +10,7 @@ public class Controller
 		model.Start();
 		view.model = model;
 		view.Start();
+		view.graph = ViewUtil.FindGraph(model.view.graph, view.main);
 	}
 
 	public void Update()
@@ -19,26 +20,27 @@ public class Controller
 
 	public void OnMouseDown(string name)
 	{
+		model.OnMouseDown(name);
 		Debug.Log("OnMouseDown: " + name);
 		if ("button_0" == name) {
-			ViewUtil.SetState(view.canvas, "closeOpen");
-			ViewUtil.SetState(view.playArea, "drinkWater");
+			ViewUtil.SetState(view.graph["canvas"], "closeOpen");
+			ViewUtil.SetState(view.graph["playArea"], "drinkWater");
 		}
 		else if ("button_1" == name) {
-			ViewUtil.SetState(view.canvas, "closeOpen");
-			ViewUtil.SetState(view.playArea, "exercise");
+			ViewUtil.SetState(view.graph["canvas"], "closeOpen");
+			ViewUtil.SetState(view.graph["playArea"], "exercise");
 		}
 		else if ("button_2" == name) {
-			ViewUtil.SetState(view.canvas, "closeOpen");
-			ViewUtil.SetState(view.playArea, "eat");
+			ViewUtil.SetState(view.graph["canvas"], "closeOpen");
+			ViewUtil.SetState(view.graph["playArea"], "eat");
 		}
 		else if ("button_3" == name) {
-			ViewUtil.SetState(view.canvas, "closeOpen");
-			ViewUtil.SetState(view.playArea, "sleep");
+			ViewUtil.SetState(view.graph["canvas"], "closeOpen");
+			ViewUtil.SetState(view.graph["playArea"], "sleep");
 		}
 		else if (name.IndexOf("cup") == 0) {
 			model.water.ToggleNamed(name);
-			ViewUtil.SetState(view.playArea, "drinkWater");
+			ViewUtil.SetState(view.graph["playArea"], "drinkWater");
 		}
 	}
 }

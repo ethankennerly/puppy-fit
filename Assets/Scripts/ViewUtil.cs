@@ -1,5 +1,6 @@
 using UnityEngine;  // GameObject
 using UnityEngine.UI;  // Text
+using System.Collections.Generic;  // Dictionary
 
 /**
  * Sharing code between projects:
@@ -41,5 +42,29 @@ public class ViewUtil
 	public static void SetText(Text textComponent, string text)
 	{
 		textComponent.text = text;
+	}
+
+	/**
+	 * Find the children game objects in the scene graph at the addresses from the view model's scene graph.
+	 * TODO:  Recurse.
+	 */
+	public static Dictionary<string, GameObject> FindGraph(Dictionary<string, object> graph, GameObject root)
+	{
+		Dictionary<string, GameObject> gameObjects = new Dictionary<string, GameObject>();
+		foreach (KeyValuePair<string, object> item in graph) {
+			string address = item.Key;
+			GameObject child = root.transform.Find(item.Key).gameObject;
+			gameObjects[item.Key] = child;
+			if (null == child) {
+				Debug.Log("Expected child at " + address);
+			}
+			else {
+				if (item.Value is string) {
+					string state = (string) item.Value;
+					SetState(child, state);
+				}
+			}
+		}
+		return gameObjects;
 	}
 }
