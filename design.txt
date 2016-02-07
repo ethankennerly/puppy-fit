@@ -1,0 +1,416 @@
+FEATURES
+	HTML
+		Measure baseline first.
+			Test case:  2016-01-23 Enter goal.  Read 80 grams.  Jennifer Russ wants to quit.
+	Unity
+		Today menu
+		Placehold animate
+			Puppy eat.
+			Puppy drink water.
+			Puppy exercise.
+			Puppy sleep.
+
+TODO
+	Count glasses of water drank today.
+		Show 9 cups like Daily Carb.
+		Click glass to drink.
+		Click glasses to undo.  Puppy fills a glass like peeing into it.
+	Extract set state from on mouse down to update.
+	Extract model states to hash and view states to hash.
+	If low performance, restric to changes hash.
+	Hear puppy drink.
+	Click sleep.  Read quote on drinking water.
+	Recognize day.
+	If not attended, puppy looks sad.
+	Placehold animate puppy.
+		Puppy shows weight.
+		Puppy weigh.
+	Extract menu from view to model.  Load view from model.
+		Foods hash.
+		Menu array.
+		Screen array.
+		Screens hash.
+		Menu view template.
+		Screen view template.
+		Populate Unity form from the above.
+		Generate HTML form from the above.
+	Environment without menu elements, such as in TocaBoca Monster.
+	Record weight.
+	After 5 days, for goal, populate weight at current weight.
+		Test case:  2016-01-23 Enter weight.  Jennifer Russ seems to feel effort.
+	After 5 days, recommend a step in carbs.
+		Ask if want to lose weight or gain muscle.
+		Test case:  2016-01-23 Enter goal.  Read 80 grams.  Jennifer Russ wants to quit.
+		
+
+Sat 01/16/2016 
+15:39
+
+https://bodywhat.com/?v=85w74x09
+
+http://modelmydiet.com/women.html?cb=411009918176
+
+http://modelmydiet.com/men.html?cb=686795709357
+
+http://www.newlifestylediet.com/virtualmodel.aspx
+
+http://www.jaha.com/
+
+Hero's Journey
+http://darebee.com/programs/hero-journey.html
+https://drive.google.com/file/d/0ByBWGnRchrKwMHE0ME9NQThoN2c/view
+
+http://lifehacker.com/dungeon-runner-fitness-quest-turns-exercise-into-an-ol-1662663239
+https://play.google.com/store/apps/details?id=com.fatchickenstudios.fitrpg&hl=en
+
+Burn Your Fat With Me
+https://play.google.com/store/apps/details?id=jp.funsolution.nensho_eng&hl=en
+
+NAME BANK
+	Fit Quest
+	Fit Pet
+	Puppy Fit
+	Fit Pet
+	Fit Kit
+	Hero Fit
+	Super Fit
+	Furry Fitness
+	Fuzzy Fit
+	Fitness Friend
+	Fitness Buddy
+
+Avatar
+
+Weight
+
+Height
+
+Fat %
+
+Age
+
+Voxel models
+
+Generic food.
+
+	Nut.
+	Vegetable.
+	Fruit.
+	Meat.
+	Grain.
+	Dairy.
+
+Boxes that represent fat
+
+Actions
+	eat
+	drink
+	exercise
+	get sick
+	die
+
+Extrapolate
+	Chart life
+
+Compare
+
+Set yearly goal:
+	weight
+	fat %
+
+Set monthly goal:
+
+Set daily goal:
+	net carbs
+	calories
+
+Diary
+
+Show icon of generic foods eaten.
+
+
+
+LIVING ROOM, APARTMENT, SUNDAY 6PM
+
+Jennifer, 35, sits at a desk.
+
+		TITLE
+	Puppy Fit
+
+	Your fitness trains your puppy
+
+	START
+
+Jennifer clicks Start.
+
+		ENTER YOUR
+	Height
+	Weight
+	Fat %
+
+Blocks depict an owner and a puppy.
+
+Fat % expands the belly, butt of the owner and puppy.
+
+Jennifer clicks Next.
+
+		GOAL
+	Months 8
+	Weight 148
+	Per month -5 pound per month
+
+		DIET
+	Low-carb
+	Low-calorie
+
+Jennifer taps low-carb.
+
+		GOAL
+	1600 calories per day
+	80 carbs per day
+	20% of calories from carbs
+
+Jennifer clicks Done.
+
+		TODAY
+	Drink Water
+	Exercise
+	Eat
+	Complete Day
+
+Jennifer clicks Drink Water.
+
+DRINK WATER
+
+Eight blue rectangles appear.  Jennifer clicks a rectangle.  
+
+		ETHAN (v.o.)
+	Gulp.  Ah.
+
+The puppy opens its mouth.
+
+The blue scales down at the same time, as in DailyCarb.
+
+The puppy smiles.
+
+Jennifer clicks X.
+
+		TODAY
+	Drink Water
+	Exercise
+	Eat
+	Complete Day
+
+Jennifer clicks Exercise.
+
+EXERCISE
+
+		EXERCISE
+	Cardio
+	Strength
+
+Jennifer clicks Cardio.
+
+		CARDIO
+	Aerobics
+	Bicycle
+	Walk or run
+
+Jennifer clicks Walk or run.
+
+WALK OR RUN
+
+		GAUGE
+	3 mph (moderate)
+
+Left circle has a green wedge of one-quarter.
+
+	15 min
+
+Puppy walking in a circle with number below.  It is three quarters covered with paw prints.
+
+		BARREL
+	0.75 mi.  
+
+Jennifer clicks left circle.
+
+		SPINNER
+	0 hours 15 minutes.  
+
+Jennifer spins to 30 minutes.
+
+Barrel changes to 1.5 mi.  
+
+Jennifer clicks Go.
+
+Puppy walks and barrel spins 1.5 revolutions.
+
+Orange particles appear under puppy's feet.
+
+	Carbs 0
+
+Orange particles and rollup counter:
+
+	Carbs -5
+
+Close up on puppy face.  Puppy smiles.
+
+Jennifer clicks X.
+
+		TODAY
+	Drink Water 1 cup
+	Exercise 108 cal
+	Eat
+	Complete Day
+
+Jennifer clicks Eat
+
+EAT
+
+		EAT
+	Vegetable
+	Nut
+	Meat or egg
+	Fruit
+	Grain
+	Dairy
+
+Jennifer clicks Meat or egg.
+
+		MEAT OR EGG
+	Egg
+	Beef
+	Pork
+	Chicken
+	More
+
+Jennifer clicks Egg.
+
+Puppy opens mouth.
+
+White box with smaller orange box goes into puppy's mouth.
+
+Orange particles trail behind the ingredient.
+
+	Carbs     2
+
+		EAT
+	Vegetable
+	Nut
+	Meat or egg
+	Fruit
+	Grain
+	Dairy
+	Back
+
+Jennifer clicks vegetable.
+
+		VEGETABLE
+	Leaf
+	Seed
+	Root
+	Back
+
+Jennifer clicks Seed.
+
+		SEED
+	Avocado
+	Tomato
+	Back
+	More
+
+Jennifer clicks Avocado.
+
+Spinner 1/2
+
+Puppy eats.
+
+	Carbs     3
+
+...
+
+Jennifer adds more food.
+
+...
+
+Jennifer clicks X.
+
+LOG
+		TODAY
+	1 egg 2 carb
+	1/2 avocado 3 carb
+	...
+	Total 49 carb
+	Goal 80 carb
+	Remaining 31 carb
+
+Jennifer adds more water.
+
+		TODAY
+	Drink Water 6 cups
+	Exercise -5 carbs
+	Eat 49 carbs
+	Complete Day
+
+Jennifer clicks Complete Day.
+
+COMPLETE DAY
+
+Puppy smiles.
+
+	At today's rate you could reach 148 pounds in 6 months!
+
+Jennifer clicks Great job!
+
+
+
+[Or: Oblong rounded rectangle of running track.
+
+		WALK OR RUN
+	Speed 3 mph (moderate)
+	Time 15 minutes
+	Distance 0.75 miles
+	Carbs -2
+
+Jennifer taps Time.  Spinner at 0 hours and 15 minutes.  Spin to 30 minutes.
+
+		WALK OR RUN
+	Speed 3 mph (moderate)
+	Time 15 minutes
+	Distance 1.5 miles
+	Carbs -5
+
+Calories have orange box next to them.
+]
+
+Days
+0.1	Paper
+1	HTML
+5	Flash
+10	Unity
+
+
+Flash and Unity
+
+Flash
+
++ Rename, reorganize, replace nodes and animations still work.
++ Share a library symbol anywhere and automatically update it.
++ Conveniently preview and customize text, buttons, images, animations.
++ Copy and paste keyframes.
++ Default keyframe interpolation is linear.
++ Draw images in place.
++ Compress vector images.
++ Conveniently share source code in multiple projects.
++ On Windows, conveniently use another code editor.
++ Easily program a button.
++ Minimal need to wire in the editor:  Root class linkages.
+
+Unity
+
++ Free.
++ 3D.
++ A lot of people make games in Unity.
++ Optimized graphics rendering.
++ Inspect and edit during play.
++ Powerfully animate nested objects.
