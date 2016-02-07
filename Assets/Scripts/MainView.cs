@@ -13,5 +13,6 @@ public class MainView : MonoBehaviour
 	
 	void Update ()
 	{
+		controller.Update();
 	}
 }

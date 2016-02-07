@@ -6,4 +6,7 @@ public class ViewModel
 		{"canvas", "none"},
 		{"playArea", "none"}
 	};
+
+	public Dictionary<string, object> news = new Dictionary<string, object>(){
+	};
 }

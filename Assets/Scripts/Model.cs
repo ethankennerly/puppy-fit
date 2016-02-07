@@ -12,26 +12,26 @@ public class Model
 
 	public void OnMouseDown(string name)
 	{
-		Debug.Log("OnMouseDown: " + name);
+		// Debug.Log("OnMouseDown: " + name);
 		if ("button_0" == name) {
-			view.graph["canvas"] = "closeOpen";
-			view.graph["playArea"] = "drinkWater";
+			view.news["canvas"] = "closeOpen";
+			view.news["playArea"] = "drinkWater";
 		}
 		else if ("button_1" == name) {
-			view.graph["canvas"] = "closeOpen";
-			view.graph["playArea"] = "exercise";
+			view.news["canvas"] = "closeOpen";
+			view.news["playArea"] = "exercise";
 		}
 		else if ("button_2" == name) {
-			view.graph["canvas"] = "closeOpen";
-			view.graph["playArea"] = "eat";
+			view.news["canvas"] = "closeOpen";
+			view.news["playArea"] = "eat";
 		}
 		else if ("button_3" == name) {
-			view.graph["canvas"] = "closeOpen";
-			view.graph["playArea"] = "sleep";
+			view.news["canvas"] = "closeOpen";
+			view.news["playArea"] = "sleep";
 		}
 		else if (name.IndexOf("cup") == 0) {
 			water.ToggleNamed(name);
-			view.graph["playArea"] = "drinkWater";
+			view.news["playArea"] = "drinkWater";
 		}
 	}
 }

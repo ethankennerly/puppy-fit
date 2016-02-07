@@ -27,7 +27,7 @@ public class ViewUtil
 		Animator animator = gameObject.GetComponent<Animator>();
 		if (null != animator && animator.isInitialized)
 		{
-			// Debug.Log("ToyView.SetState: " + gameObject + ": " + state);
+			// Debug.Log("ViewUtil.SetState: " + gameObject + ": " + state);
 			if (isRestart)
 			{
 				animator.Play(state);
