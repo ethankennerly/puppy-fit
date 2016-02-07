@@ -7,14 +7,17 @@ public class ControllerUtil
 	 * Side effect:  Clears news.
 	 * TODO: Recurse.
 	 */
-	public static void SetStates(Dictionary<string, object> news, Dictionary <string, GameObject> sceneGraph)
+	public static void SetStates(Dictionary<string, object> news, Dictionary<string, GameObjectTree> root)
 	{
 		foreach (KeyValuePair<string, object> item in news) {
 			if (item.Value is string) {
 				string state = (string) item.Value;
-				GameObject gameObject = sceneGraph[item.Key];
-				// Debug.Log("ControllerUtil.SetStates: " + gameObject + ": " + state);
-				ViewUtil.SetState(gameObject, state, true); 
+				GameObject child = root[item.Key].self;
+				// Debug.Log("ControllerUtil.SetStates: " + child + ": " + state);
+				ViewUtil.SetState(child, state, true); 
+			}
+			else {
+				// TODO:  Recurse
 			}
 		}
 		news.Clear();

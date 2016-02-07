@@ -6,7 +6,7 @@ public class View
 	public Model model;
 	public GameObject main;
 	public GameObject[] waters;
-	public Dictionary<string, GameObject> graph;
+	public Dictionary<string, GameObjectTree> graph;
 	
 	public void Start()
 	{
