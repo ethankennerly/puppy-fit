@@ -58,12 +58,6 @@ public class ViewUtil
 			if (null == child) {
 				Debug.Log("Expected child at " + address);
 			}
-			else {
-				if (item.Value is string) {
-					string state = (string) item.Value;
-					SetState(child, state);
-				}
-			}
 		}
 		return gameObjects;
 	}
