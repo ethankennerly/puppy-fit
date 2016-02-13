@@ -46,7 +46,6 @@ public class ViewUtil
 
 	/**
 	 * Find the children game objects in the scene graph at the addresses from the view model's scene graph.
-	 * TODO:  Recurse.
 	 */
 	public static Dictionary<string, GameObjectTree> FindGraph(Dictionary<string, object> graph, GameObject root)
 	{
@@ -59,7 +58,7 @@ public class ViewUtil
 			if (null == child) {
 				Debug.Log("Expected child at " + address);
 			}
-			else if (item.Value is Dictionary<string, GameObjectTree>) {
+			else if (item.Value is Dictionary<string, object>) {
 				Dictionary<string, object> subGraph = (Dictionary<string, object>) item.Value;
 				sceneGraph[item.Key].children = FindGraph(subGraph, child);
 			}

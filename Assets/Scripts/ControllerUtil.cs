@@ -4,20 +4,24 @@ using System.Collections.Generic;  // Dictionary
 public class ControllerUtil
 {
 	/**
-	 * Side effect:  Clears news.
-	 * TODO: Recurse.
+	 * @param	news	If key "state" in news, set descending child to that state.  Recurses news and descendents.  Side effect:  Clears all news.  
 	 */
-	public static void SetStates(Dictionary<string, object> news, Dictionary<string, GameObjectTree> root)
+	public static void SetStates(Dictionary<string, object> news, Dictionary<string, GameObjectTree> descendents)
 	{
+		GameObjectTree tree;
+		GameObject child;
 		foreach (KeyValuePair<string, object> item in news) {
-			if (item.Value is string) {
-				string state = (string) item.Value;
-				GameObject child = root[item.Key].self;
-				// Debug.Log("ControllerUtil.SetStates: " + child + ": " + state);
+			// Debug.Log("ControllerUtil.SetStates: key " + item.Key);
+			tree = descendents[item.Key];
+			child = tree.self;
+			Dictionary<string, object> articles = (Dictionary<string, object>) item.Value;
+			if (articles.ContainsKey("state")) {
+				string state = (string) articles["state"];
 				ViewUtil.SetState(child, state, true); 
+				articles.Remove("state");
 			}
-			else {
-				// TODO:  Recurse
+			if (1 <= articles.Count) {
+				SetStates(articles, tree.children);
 			}
 		}
 		news.Clear();

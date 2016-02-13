@@ -16,23 +16,23 @@ public class Model
 	{
 		Debug.Log("OnMouseDown: " + name);
 		if ("button_0" == name) {
-			view.news["canvas"] = "closeOpen";
-			view.news["playArea"] = "drinkWater";
+			view.SetState(new string[]{"canvas"}, "closeOpen");
+			view.SetState(new string[]{"playArea"}, "drinkWater");
 			// TODO:
-			// view.news["camera"] = "waters";
-			// view.news["canvas"] = "close";
+			// view.SetState(new string[]{"camera"}, "waters");
+			// view.SetState(new string[]{"canvas"}, "close");
 		}
 		else if ("button_1" == name) {
-			view.news["canvas"] = "closeOpen";
-			view.news["playArea"] = "exercise";
+			view.SetState(new string[]{"canvas"}, "closeOpen");
+			view.SetState(new string[]{"playArea"}, "exercise");
 		}
 		else if ("button_2" == name) {
-			view.news["canvas"] = "closeOpen";
-			view.news["playArea"] = "eat";
+			view.SetState(new string[]{"canvas"}, "closeOpen");
+			view.SetState(new string[]{"playArea"}, "eat");
 		}
 		else if ("button_3" == name) {
-			view.news["canvas"] = "closeOpen";
-			view.news["playArea"] = "sleep";
+			view.SetState(new string[]{"canvas"}, "closeOpen");
+			view.SetState(new string[]{"playArea"}, "sleep");
 		}
 		else if (name.IndexOf("cup") == 0) {
 			string state = water.ToggleNamed(name);

@@ -11,6 +11,8 @@ public class View
 
 	/**
 	 * Add ButtonView component to buttons and waters.
+	 * Expects collider on each cup.
+	 * Test case:  2016-02-13 Mouse down on cup.  Expect log.  Got no response.
 	 */
 	public void Start()
 	{
@@ -28,7 +30,7 @@ public class View
 				}
 				else {
 					waters[index] = child;
-					child.AddComponent<MouseView>();
+					child.AddComponent<ButtonView>();
 				}
 			}
 			for (index = 0; index < model.buttonCount; index++) {
