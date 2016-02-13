@@ -66,4 +66,32 @@ public class ViewUtil
 	{
 		textComponent.text = text;
 	}
+
+	public static AudioSource audio;
+	public static Dictionary<string, AudioClip> sounds;
+
+	/**
+	 * Expects exactly one instantiated game object with this name.
+	 * Preloads sounds into a static dictionary to playback by base filename.
+	 */
+	public static AudioSource SetupAudio(string gameObjectName, string[] loadBaseFilenames, string audioPath = "sounds/")
+	{
+		GameObject gameObject = GameObject.Find(gameObjectName);
+		audio = gameObject.GetComponent<AudioSource>();
+		if (null == audio) {
+			gameObject.AddComponent<AudioSource>();
+			audio = gameObject.GetComponent<AudioSource>();
+		}
+		sounds = new Dictionary<string, AudioClip>();
+		for (int index = 0; index < loadBaseFilenames.Length; index++) {
+			string filename = loadBaseFilenames[index];
+			sounds[filename] = (AudioClip) Resources.Load(audioPath + filename);
+		}
+		return audio;
+	}
+
+	public static void PlaySound(string name)
+	{
+		audio.PlayOneShot(sounds[name]);
+	}
 }

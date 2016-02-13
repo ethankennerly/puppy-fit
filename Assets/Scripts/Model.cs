@@ -42,12 +42,18 @@ public class Model
 		}
 		else if (name.IndexOf("cup") == 0) {
 			string state = water.ToggleNamed(name);
+			string soundName;
 			SetState(new string[]{"playArea", "waters", name}, state); 
 			if ("empty" == state) {
 				SetState(new string[]{"playArea"}, "drinkWater"); 
 				SetState(camera, "none");
+				soundName = "drinkWater";
+			}
+			else {
+				soundName = "drinkWaterUndo";
 			}
 			SetState(canvas, "closeOpen");
+			view.soundNews.Add(soundName);
 		}
 	}
 }

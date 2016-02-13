@@ -1,4 +1,4 @@
-﻿using UnityEngine;  // MonoBehaviour
+﻿using UnityEngine;  // AudioClip, MonoBehaviour
 
 public class MainView : MonoBehaviour
 {

@@ -93,4 +93,13 @@ public class ControllerUtil
 			ViewUtil.SetupButton(controller, address);
 		}
 	}
+
+	public static void PlaySounds(List<string> soundBaseNames)
+	{
+		for (int index = 0; index < soundBaseNames.Count; index++) {
+			string filename = soundBaseNames[index];
+			ViewUtil.PlaySound(filename);
+		}
+		soundBaseNames.Clear();
+	}
 }

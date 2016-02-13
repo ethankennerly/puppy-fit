@@ -9,13 +9,14 @@ FEATURES
 			Puppy drink water.
 			Puppy exercise.
 			Puppy sleep.
-
-TODO
 	Count glasses of water drank today.
 		Show 9 cups like Daily Carb.
 		Click glass to drink.
+
+TODO
 		Click glasses to undo.  Puppy fills a glass like peeing into it.
 	Hear puppy drink.
+		Chiptone http://sfbgames.com/chiptone
 	Count food eaten today.
 		Show 9 bowls.
 		Click full bowl to eat.

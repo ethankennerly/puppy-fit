@@ -38,6 +38,13 @@ public class ViewModel
 		"cup_8"
 	};
 
+	public string[] sounds = new string[]{
+		"drinkWater",
+		"drinkWaterUndo"
+	};
+
+	public List<string> soundNews = new List<string>();
+
 	public Dictionary<string, object> news = new Dictionary<string, object>(){
 	};
 }
