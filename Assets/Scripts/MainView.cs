@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;  // MonoBehaviour
 
 public class MainView : MonoBehaviour
 {

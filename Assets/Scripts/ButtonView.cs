@@ -24,6 +24,10 @@ public class ButtonView : MonoBehaviour, IPointerDownHandler  // required interf
 		controller.OnMouseDown(name);
 	}
 
+	/**
+	 * Expects collider on each cup.
+	 * Test case:  2016-02-13 Mouse down on cup.  Expect log.  Got no response.
+	 */
 	public void OnMouseDown()
 	{
 		controller.OnMouseDown(name);

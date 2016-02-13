@@ -12,6 +12,22 @@ using System.Collections.Generic;  // Dictionary
 public class ViewUtil
 {
 	/**
+	 * Add ButtonView component to buttons and clickable game objects.
+	 * @param	address		Expects the name is unique among all prefabs on the stage.
+	 */
+	public static void SetupButton(Controller controller, string address)
+	{
+		ButtonView.controller = controller;
+		GameObject child = GameObject.Find(address);
+		child.AddComponent<ButtonView>();
+	}
+
+	public static GameObject GetChild(GameObject parent, string name)
+	{
+		GameObject child = parent.transform.Find(name).gameObject;
+		return child;
+	}
+	/**
 	 * Call animator.Play instead of animator.SetTrigger, in case the animator is in transition.
 	 * Test case:  2015-11-15 Enter "SAT".  Type "RAT".  Expect R selected.  Got "R" resets to unselected.
 	 * http://answers.unity3d.com/questions/801875/mecanim-trigger-getting-stuck-in-true-state.html
@@ -49,28 +65,5 @@ public class ViewUtil
 	public static void SetText(Text textComponent, string text)
 	{
 		textComponent.text = text;
-	}
-
-	/**
-	 * Find the children game objects in the scene graph at the addresses from the view model's scene graph.
-	 * @param	root	The root will not be in the graph.  The root's children will be the values of the top-level hash.
-	 */
-	public static Dictionary<string, GameObjectTree> FindGraph(Dictionary<string, object> graph, GameObject root)
-	{
-		Dictionary<string, GameObjectTree> sceneGraph = new Dictionary<string, GameObjectTree>();
-		foreach (KeyValuePair<string, object> item in graph) {
-			string address = item.Key;
-			GameObject child = root.transform.Find(item.Key).gameObject;
-			GameObjectTree node = new GameObjectTree(child);
-			sceneGraph[item.Key] = node;
-			if (null == child) {
-				Debug.Log("Expected child at " + address);
-			}
-			else if (item.Value is Dictionary<string, object>) {
-				Dictionary<string, object> subGraph = (Dictionary<string, object>) item.Value;
-				sceneGraph[item.Key].children = FindGraph(subGraph, child);
-			}
-		}
-		return sceneGraph;
 	}
 }

@@ -394,7 +394,8 @@ Days
 10	Unity
 
 
-Flash and Unity
+Flash compared to Unity
+
 
 Flash
 
@@ -409,6 +410,12 @@ Flash
 + On Windows, conveniently use another code editor.
 + Easily program a button.
 + Minimal need to wire in the editor:  Root class linkages.
++ Any display object is conveniently animated.
++ No special cases for buttons or other objects.
++ Descendents of objects conveniently capture button presses on listeners.
++ Conveniently stop animations when they finish.
+
+
 
 Unity
 

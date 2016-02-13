@@ -9,6 +9,11 @@ public class Toolkit
 {
 	public static string lineDelimiter = "\n";
 
+	public static void Log(string message)
+	{
+		Debug.Log(message);
+	}
+
 	public static int ParseIndex(string tileName)
 	{
 		int tileIndex = int.Parse(tileName.Split('_')[1]);
