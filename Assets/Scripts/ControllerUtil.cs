@@ -11,7 +11,6 @@ public class ControllerUtil
 		GameObjectTree tree;
 		GameObject child;
 		foreach (KeyValuePair<string, object> item in news) {
-			// Debug.Log("ControllerUtil.SetStates: key " + item.Key);
 			tree = descendents[item.Key];
 			child = tree.self;
 			Dictionary<string, object> articles = (Dictionary<string, object>) item.Value;

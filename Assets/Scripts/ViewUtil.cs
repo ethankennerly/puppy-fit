@@ -21,6 +21,9 @@ public class ViewUtil
 	 *
 	 * In editor, deleted and recreated animator state transition.  Test case:  2015-11-15 Got error "Transition '' in state 'selcted' uses parameter 'none' which is not compatible with condition type"
 	 * http://answers.unity3d.com/questions/1070010/transition-x-in-state-y-uses-parameter-z-which-is.html
+	 *
+	 * Unity expects not to animate the camera or the root itself.  Instead animate the child of the root.  The root might not move.
+	 * Test case:  2016-02-13 Animate camera position.  Play.  Camera does not move.  Generate root motion curves.  Apply root motion curves.  Still camera does not move.  Assign animator to parent of camera.  Animate child.  Then camera moves.
 	 */
 	public static void SetState(GameObject gameObject, string state, bool isRestart = true)
 	{
@@ -50,6 +53,7 @@ public class ViewUtil
 
 	/**
 	 * Find the children game objects in the scene graph at the addresses from the view model's scene graph.
+	 * @param	root	The root will not be in the graph.  The root's children will be the values of the top-level hash.
 	 */
 	public static Dictionary<string, GameObjectTree> FindGraph(Dictionary<string, object> graph, GameObject root)
 	{

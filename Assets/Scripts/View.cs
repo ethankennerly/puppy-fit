@@ -6,7 +6,6 @@ public class View
 	public Controller controller;
 	public Model model;
 	public GameObject main;
-	public GameObject[] waters;
 	public Dictionary<string, GameObjectTree> graph;
 
 	/**
@@ -18,7 +17,6 @@ public class View
 	{
 		if (null == main) {
 			main = GameObject.Find("main");
-			waters = new GameObject[model.water.count];
 			int index;
 			string address;
 			GameObject child;
@@ -29,7 +27,6 @@ public class View
 					Debug.Log("Expected child at " + address);
 				}
 				else {
-					waters[index] = child;
 					child.AddComponent<ButtonView>();
 				}
 			}
