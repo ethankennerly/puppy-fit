@@ -28,21 +28,26 @@ public class Model
 		else if ("button_1" == name) {
 			SetState(canvas, "closeOpen");
 			SetState(new string[]{"playArea"}, "exercise");
+			SetState(camera, "none");
 		}
 		else if ("button_2" == name) {
 			SetState(canvas, "closeOpen");
 			SetState(new string[]{"playArea"}, "eat");
+			SetState(camera, "none");
 		}
 		else if ("button_3" == name) {
 			SetState(canvas, "closeOpen");
 			SetState(new string[]{"playArea"}, "sleep");
+			SetState(camera, "none");
 		}
 		else if (name.IndexOf("cup") == 0) {
 			string state = water.ToggleNamed(name);
 			SetState(new string[]{"playArea", "waters", name}, state); 
-			SetState(new string[]{"playArea"}, "drinkWater"); 
+			if ("empty" == state) {
+				SetState(new string[]{"playArea"}, "drinkWater"); 
+				SetState(camera, "none");
+			}
 			SetState(canvas, "closeOpen");
-			SetState(camera, "none");
 		}
 	}
 }

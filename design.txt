@@ -15,6 +15,7 @@ TODO
 		Show 9 cups like Daily Carb.
 		Click glass to drink.
 		Click glasses to undo.  Puppy fills a glass like peeing into it.
+	Hear puppy drink.
 	Count food eaten today.
 		Show 9 bowls.
 		Click full bowl to eat.
@@ -22,7 +23,6 @@ TODO
 	Extract set state from on mouse down to update.
 	Extract model states to hash and view states to hash.
 	If low performance, restric to changes hash.
-	Hear puppy drink.
 	Click sleep.  Read quote on drinking water.
 	Recognize day.
 	If not attended, puppy looks sad.

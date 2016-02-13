@@ -2,7 +2,7 @@ public class Water
 {
 	public bool[] isFulls;
 	public string[] states;
-	public int count = 3;
+	public int count = 9;
 
 	public void Start()
 	{
