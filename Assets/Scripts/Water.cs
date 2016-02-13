@@ -9,15 +9,15 @@ public class Water
 		isFulls = new bool[count];
 		states = new string[count];
 		for (int index = 0; index < count; index++) {
-			isFulls[index] = false;
-			states[index] = "none";
+			isFulls[index] = true;
+			states[index] = "full";
 		}
 	}
 
 	public void Toggle(int index)
 	{
 		isFulls[index] = !isFulls[index];
-		states[index] = isFulls[index] ? "begin" : "end";
+		states[index] = isFulls[index] ? "full" : "empty";
 	}
 
 	public void ToggleNamed(string name)
