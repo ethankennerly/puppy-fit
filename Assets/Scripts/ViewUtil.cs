@@ -37,6 +37,10 @@ public class ViewUtil
 				animator.Play(state, -1, 0f);
 			}
 		}
+		else
+		{
+			Debug.Log("ViewUtil.SetState: Does animator exist? " + gameObject + ": " + state);
+		}
 	}
 
 	public static void SetText(Text textComponent, string text)

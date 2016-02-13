@@ -1,5 +1,4 @@
 using UnityEngine;  // Debug
-using System.Collections.Generic;  // Dictionary
 
 public class Model
 {
