@@ -20,9 +20,10 @@ public class Water
 		states[index] = isFulls[index] ? "full" : "empty";
 	}
 
-	public void ToggleNamed(string name)
+	public string ToggleNamed(string name)
 	{
 		int index = Toolkit.ParseIndex(name);
 		Toggle(index);
+		return states[index];
 	}
 }

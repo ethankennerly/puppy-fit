@@ -1,4 +1,5 @@
 using UnityEngine;  // Debug
+using System.Collections.Generic;  // Dictionary
 
 public class Model
 {
@@ -16,6 +17,9 @@ public class Model
 		if ("button_0" == name) {
 			view.news["canvas"] = "closeOpen";
 			view.news["playArea"] = "drinkWater";
+			// TODO:
+			// view.news["camera"] = "waters";
+			// view.news["canvas"] = "close";
 		}
 		else if ("button_1" == name) {
 			view.news["canvas"] = "closeOpen";
@@ -30,8 +34,10 @@ public class Model
 			view.news["playArea"] = "sleep";
 		}
 		else if (name.IndexOf("cup") == 0) {
-			water.ToggleNamed(name);
-			view.news["playArea"] = "drinkWater";
+			string state = water.ToggleNamed(name);
+			view.SetState(new string[]{"playArea", "waters", name}, state); 
+			view.SetState(new string[]{"playArea"}, "drinkWater"); 
+			view.SetState(new string[]{"canvas"}, "closeOpen");
 		}
 	}
 }

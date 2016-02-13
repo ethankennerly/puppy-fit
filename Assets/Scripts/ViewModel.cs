@@ -15,4 +15,17 @@ public class ViewModel
 
 	public Dictionary<string, object> news = new Dictionary<string, object>(){
 	};
+
+	public void SetState(string[] address, string state)
+	{
+		Dictionary<string, object> parent = news;
+		for (int index = 0; index < address.Length; index++) {
+			string name = address[index];
+			if (!parent.ContainsKey(name)) {
+				parent[name] = new Dictionary<string, object>();
+			}
+			parent = (Dictionary<string, object>) parent[name];
+		}
+		parent["state"] = state;
+	}
 }
