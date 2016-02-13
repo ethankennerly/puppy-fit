@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.EventSystems;  // Required when using Event data.
 
 public class ButtonView : MonoBehaviour, IPointerDownHandler  // required interface when using the OnPointerDown method.
@@ -20,7 +19,12 @@ public class ButtonView : MonoBehaviour, IPointerDownHandler  // required interf
 	 * http://answers.unity3d.com/questions/829594/ui-button-onmousedown.html
 	 * http://docs.unity3d.com/ScriptReference/UI.Selectable.OnPointerDown.html
 	 */
-	public void OnPointerDown (PointerEventData eventData) 
+	public void OnPointerDown(PointerEventData eventData) 
+	{
+		controller.OnMouseDown(name);
+	}
+
+	public void OnMouseDown()
 	{
 		controller.OnMouseDown(name);
 	}

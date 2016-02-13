@@ -7,7 +7,6 @@ public class MainView : MonoBehaviour
 
 	void Start ()
 	{
-		ButtonView.controller = controller;
 		controller.Start();
 	}
 	

@@ -7,8 +7,11 @@ public class Controller
 
 	public void Start()
 	{
-		model.Start();
+		ButtonView.controller = this;
+		MouseView.controller = this;
 		view.model = model;
+		view.controller = this;
+		model.Start();
 		view.Start();
 		view.graph = ViewUtil.FindGraph(model.view.graph, view.main);
 	}

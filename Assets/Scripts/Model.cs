@@ -5,6 +5,7 @@ public class Model
 {
 	public Water water = new Water();
 	public ViewModel view = new ViewModel();
+	public int buttonCount = 4;
 
 	public void Start()
 	{
@@ -13,7 +14,7 @@ public class Model
 
 	public void OnMouseDown(string name)
 	{
-		// Debug.Log("OnMouseDown: " + name);
+		Debug.Log("OnMouseDown: " + name);
 		if ("button_0" == name) {
 			view.news["canvas"] = "closeOpen";
 			view.news["playArea"] = "drinkWater";

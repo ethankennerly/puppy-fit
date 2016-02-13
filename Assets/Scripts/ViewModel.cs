@@ -16,6 +16,10 @@ public class ViewModel
 	public Dictionary<string, object> news = new Dictionary<string, object>(){
 	};
 
+	/**
+	 * Conveniently construct nested hashes.
+	 * If an ancestor is already in news then merge.
+	 */
 	public void SetState(string[] address, string state)
 	{
 		Dictionary<string, object> parent = news;
