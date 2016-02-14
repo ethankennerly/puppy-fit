@@ -399,8 +399,25 @@ Days
 
 Flash compared to Unity
 
+My summary:
 
-Flash
+Unity:  Productive for 3D.
+Flash:  Productive for 2D.
+
+
+
+Unity:
+
++ Free.
++ 3D.
++ A lot of people make games in Unity.
++ Optimized graphics rendering.
++ Inspect and edit during play.
++ Powerfully animate nested objects.
+
+
+
+Flash:
 
 + Rename, reorganize, replace nodes and animations still work.
 + Share a library symbol anywhere and automatically update it.
@@ -417,17 +434,9 @@ Flash
 + No special cases for buttons or other objects.
 + Descendents of objects conveniently capture button presses on listeners.
 + Conveniently stop animations when they finish.
++ Crisp fonts on all devices.
++ Exact layout on all devices.
 
-
-
-Unity
-
-+ Free.
-+ 3D.
-+ A lot of people make games in Unity.
-+ Optimized graphics rendering.
-+ Inspect and edit during play.
-+ Powerfully animate nested objects.
 
 
 Sat 02/13/2016 

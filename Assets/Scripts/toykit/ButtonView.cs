@@ -25,8 +25,10 @@ public class ButtonView : MonoBehaviour, IPointerDownHandler  // required interf
 	}
 
 	/**
-	 * Expects collider on each cup.
+	 * Expects collider on each 3D object.
 	 * Test case:  2016-02-13 Mouse down on cup.  Expect log.  Got no response.
+	 * On mobile, raycast is preferred.  Example:
+	 * http://wiki.unity3d.com/index.php/OnTouch
 	 */
 	public void OnMouseDown()
 	{
