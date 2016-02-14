@@ -12,11 +12,13 @@ FEATURES
 	Count glasses of water drank today.
 		Show 9 cups like Daily Carb.
 		Click glass to drink.
-
-TODO
-		Click glasses to undo.  Puppy fills a glass like peeing into it.
 	Hear puppy drink.
 		Chiptone http://sfbgames.com/chiptone
+
+TODO
+	Drink water on Android.
+		http://gamedevtodied.blogspot.com/2015/01/unity3d-android-build-android-sdk-is.html
+	Click glasses to undo.  Puppy fills a glass like peeing into it.
 	Count food eaten today.
 		Show 9 bowls.
 		Click full bowl to eat.
